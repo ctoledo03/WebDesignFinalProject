@@ -22,7 +22,11 @@ export default defineConfig({
      
     },
   },
+  
   build: {
     outDir: '../server/dist/app',
+    rollupOptions: {
+      input: '../index.jsx'
+    }
   },
 });
