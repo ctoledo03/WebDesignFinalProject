@@ -20,6 +20,8 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import ArrowForward from '@material-ui/icons/ArrowForward';
+import Styles from '../Styles';
+
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -63,6 +65,8 @@ abortController.abort()
   
     const classes = useStyles()
 return (
+  <>
+  <Styles/>
 <Paper className={classes.root} elevation={4}>
 <Typography variant="h6" className={classes.title}> 
 All Users
@@ -88,7 +92,7 @@ All Users
 })} 
 </List>
 </Paper>
-)
+</>)
 }
 
 

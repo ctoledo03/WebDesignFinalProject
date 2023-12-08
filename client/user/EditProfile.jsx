@@ -11,6 +11,7 @@ import auth from '../lib/auth-helper.js'
 import {read, update} from './api-user.js'
 import {Navigate} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
+import Styles from '../Styles';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -96,6 +97,9 @@ export default function EditProfile({ match }) {
       return (<Navigate to={'/user/' + values.userId}/>)
     }
     return (
+
+      <>
+      <Styles/>
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h6" className={classes.title}>
@@ -115,6 +119,7 @@ export default function EditProfile({ match }) {
           <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Submit</Button>
         </CardActions>
       </Card>
+      </>
     )
 }
 

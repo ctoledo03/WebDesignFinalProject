@@ -6,6 +6,7 @@ import { Card, CardContent, Typography, TextField, CardActions, Button, Dialog, 
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { create } from './api-user';
+import Styles from '../Styles';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -76,7 +77,10 @@ export default function Signup() {
   };
 
   return (
+  <>
+    <Styles />
     <div>
+      
       <Card className={classes.card}> 
         <CardContent>
           <Typography variant="h6" className={classes.title}> 
@@ -133,6 +137,7 @@ export default function Signup() {
         </DialogActions> 
       </Dialog>
     </div>
+   </>
   );
 }
 

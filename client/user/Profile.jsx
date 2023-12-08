@@ -19,6 +19,8 @@ import auth from '../lib/auth-helper.js'
 import {read} from './api-user.js'
 import {useLocation, Navigate, Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom';
+import Styles from '../Styles';
+
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
@@ -70,6 +72,8 @@ export default function Profile({ match }) {
     console.log(user._id)
     }
     return (
+      <>
+      <Styles/>
       <Paper className={classes.root} elevation={4}>
         <Typography variant="h6" className={classes.title}>
           Profile
@@ -101,5 +105,6 @@ export default function Profile({ match }) {
           </ListItem>
         </List>
       </Paper>
+    </>
     )
   }

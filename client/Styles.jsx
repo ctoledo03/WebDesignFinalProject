@@ -122,15 +122,32 @@ export default function Styles(){
               display: inline-block;
               font-size: 14px;
             }
-    
-            /* Your existing CSS styles */
-    
-            /* Style for the button container */
+            
+            .startoptions{
+                display: flexbox;
+                margin-top: 10%;
+                
+            }
+
+            .startoptions-row{
+              display: flex;
+              flex: 1;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .startoptions-row Button{
+              margin: 10px;
+              
+            }
+
+           
+            
             .button-container {
               display: flex;
-              justify-content: space-between; /* Adjust as needed */
+              justify-content: space-between; 
               margin-top: 20px;
-              margin-left: 30px; /* Add some spacing between buttons */
+              margin-left: 30px; 
             }
     
             /* peru */

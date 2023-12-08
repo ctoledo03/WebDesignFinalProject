@@ -11,6 +11,7 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import auth from '../lib/auth-helper.js'
 import {remove} from './api-user.js'
 import {Navigate} from 'react-router-dom'
+import Styles from '../Styles';
 
 export default function DeleteUser(props) {
   const [open, setOpen] = useState(false)
@@ -39,7 +40,10 @@ export default function DeleteUser(props) {
   if (redirect) {
     return <Navigate to='/'/>
   }
-    return (<span>
+    return (
+    <>
+    <Styles/>
+    <span>
       <IconButton aria-label="Delete" onClick={clickButton} color="secondary">
         <DeleteIcon/>
       </IconButton>
@@ -60,8 +64,8 @@ export default function DeleteUser(props) {
           </Button>
         </DialogActions>
       </Dialog>
-    </span>)
-
+    </span>
+  </>)
 }
 DeleteUser.propTypes = {
   userId: PropTypes.string.isRequired

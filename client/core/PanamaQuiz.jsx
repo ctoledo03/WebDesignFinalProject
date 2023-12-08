@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './styles'; // Adjust the path based on your project structure
+import Styles from '../Styles'; // Adjust the path based on your project structure
 import PanamaQuizPopulator from './jsxQuiz/panamaQuizPopulator';
 
 export default function PanamaQuiz() {

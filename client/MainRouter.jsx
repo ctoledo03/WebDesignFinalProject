@@ -4,6 +4,7 @@ import Switch from 'react'
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './core/Home' 
+import Main from './core/MainPage.jsx'
 import Menu from './core/Menu' 
 import PeruQuiz from './core/PeruQuiz.jsx';
 import ColumbiaQuiz from './core/columbiaQuiz.jsx';
@@ -25,6 +26,7 @@ function MainRouter() {
       <Menu/>
       <Routes>
         <Route path="/" element={<Home />} /> 
+        <Route path="/main" element={<Main />} /> 
         <Route path="/users" element={<Users />} />
         <Route path="/peruQuiz" element={<PeruQuiz />} />
         <Route path="/columbiaQuiz" element={<ColumbiaQuiz />} />

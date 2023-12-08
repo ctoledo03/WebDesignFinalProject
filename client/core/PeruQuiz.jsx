@@ -35,7 +35,7 @@
 // }
 
 import React from 'react';
-import Styles from './styles'; // Adjust the path based on your project structure
+import Styles from '../Styles'; // Adjust the path based on your project structure
 import PeruQuizPopulator from './jsxQuiz/peruQuizPopulator';
 
 export default function PeruQuiz() {
