@@ -74,7 +74,7 @@ export default function Signin(props) {
 
   const { from } = location.state || {
     from: {
-      pathname: "/",
+      pathname: "/main",
     },
   };
   const { redirectToReferrer } = values;
