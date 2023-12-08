@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "@material-ui/core/Button";
+import {
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+} from "@material-ui/core";
+import PropTypes from "prop-types";
 import Styles from "../Styles";
-import CardActions from "@material-ui/core/CardActions";
+
 export default function Home() {
+  const [open, setOpen] = useState(false);
+  const clickSubmit = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  Home.propTypes = {
+    open: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired,
+  };
   return (
     <>
       <Styles />
@@ -22,25 +41,50 @@ export default function Home() {
           <div className="startoptions">
             <div className="startoptions-row">
               <Link to="/signin" className="flag-link">
-                  <Button color="primary" variant="contained">
+                <Button color="primary" variant="contained">
                   Sign In
-                  </Button>
+                </Button>
               </Link>
               <Link to="/signup">
-                  <Button color="primary" variant="contained">
+                <Button color="primary" variant="contained">
                   Sign Up
-                  </Button>
+                </Button>
               </Link>
             </div>
             <div className="startoptions-row">
-              <Link to="/main">
-                  <Button color="primary" variant="contained">
-                    Continue as guest
-                  </Button>
-              </Link>
+              <Button color="primary" variant="contained" onClick={clickSubmit}>
+                Continue as guest
+              </Button>
             </div>
-            
-            
+
+            <Dialog open={open} onClose={handleClose}>
+              <DialogTitle>Guest</DialogTitle>
+              <DialogContent>
+                <DialogContentText>
+                  The score you get on the trivias won't be saved.
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Link to="/signup">
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={handleClose}
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
+                <Link to="/main">
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={handleClose}
+                  >
+                    Continue
+                  </Button>
+                </Link>
+              </DialogActions>
+            </Dialog>
           </div>
         </section>
       </main>
