@@ -4,11 +4,17 @@ Project Developed by FILATINOS
 Group Members:
 
 Carlo Toledo           301296658
+
 Samuel Armesto         301275492
+
 Samuel Bustos          301286314
+
 Antonio Chung          301316341
+
 Cathlyn Sarming        301295539
+
 Miha Morales           301297007
+
 
 INSTRUCTIONS
 1. Download the file
